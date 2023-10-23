@@ -6,8 +6,8 @@ import PatientMenu from "../../components/buttons/PatientMenu";
 import Pagination from "../../components/table/Pagination";
 import LoadingScreen from "../../components/loading-screens/LoadingScreen";
 import useDataTable from "../../hooks/useDataTable";
-import PatientProfile from "./Patientprofile";
 import { Fade } from "react-reveal";
+import PatientProfile from "./PatientProfile";
 
 const Patients = () => {
 	const {
