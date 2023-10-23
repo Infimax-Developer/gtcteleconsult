@@ -30,6 +30,10 @@ const ShowAppointmentModal = (props, ref) => {
 	const { title, children, size = "modal-md" } = props;
 	const [appointment, setAppointment] = useState(null);
 	const [mount, setMount] = useState(0);
+
+	const [linkURl, setLinkURL] = useState(
+		`${origin}/consultation?channel=Test&token=007eJxTYPB0eaO9vEotrTPAwflN1reHeX95n5YKPl2rc9CJYevVElMFBktLi7Q0I7OktBQzS5OUpNREixQDo7Tk1DRTy9QUQ7OkOFmz1IZARob74cZMjAwQCOKzMISkFpcwMAAAYbIfig`
+	);
 	const [modalOpen, setModalOpen] = useState(false);
 	useEffect(() => {
 		let t = setTimeout(() => {
@@ -55,6 +59,14 @@ const ShowAppointmentModal = (props, ref) => {
 	};
 	const hide = () => {
 		setModalOpen(false);
+	};
+	const copyLink = async () => {
+		// Copy the text inside the text field
+		await window.navigator.clipboard.writeText(linkURl);
+		hide();
+
+		// Alert the copied text
+		alert("Copied the text: " + linkURl);
 	};
 	const submit = (data) => {};
 	return (
@@ -157,20 +169,41 @@ const ShowAppointmentModal = (props, ref) => {
 
 									<div className="flex flex-col items-center justify-center">
 										<span className="text-center text-sm text-slate-400">
-											Virtual Consultation
+											Virtual Consultation link
 										</span>
+										<input
+											id="linkUrl"
+											style={{
+												display: "inline-block",
+												overflow: "hidden",
+												whiteSpace: "wrap",
+											}}
+											className="text- mb-4 p-4 select-all rounded-xl max-w-[100%] break-all bg-blue-50 w-full"
+											value={linkURl}
+											onClick={copyLink}
+										/>
 										<ActionBtn
 											type="secondary"
 											className="mx-5 mt-2 gap-3"
-											onClick={hide}
+											onClick={() => {
+												copyLink();
+												// hide();
+											}}
 										>
 											<FlatIcon icon="rr-video-plus" />
-											Join Virtual Consultation
+											Copy Link
 										</ActionBtn>
 									</div>
 								</div>
 
 								<div className="p-4 flex items-center justify-end">
+									<ActionBtn
+										type="success"
+										className="mr-auto"
+										// onClick={setAsDone}
+									>
+										Set as done
+									</ActionBtn>
 									<ActionBtn
 										className="ml-auto"
 										onClick={hide}

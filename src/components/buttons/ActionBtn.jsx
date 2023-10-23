@@ -43,6 +43,8 @@ const ActionBtn = (props) => {
 
 			case "foreground":
 				return `bg-slate-100 hover:bg-slate-300 focus:bg-slate-300 text-slate-500 ${disabledClass}`;
+			case "success":
+				return `bg-green-600 hover:bg-green-700 focus:bg-green-700 text-white ${disabledClass}`;
 
 			default:
 				return `bg-primary hover:bg-primary-darker focus:bg-primary-dark text-white ${disabledClass}`;

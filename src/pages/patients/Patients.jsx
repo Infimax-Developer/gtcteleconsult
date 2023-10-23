@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
-import FlatIcon from "../../components/FlatIcon";
-import LayoutContainer from "../../components/container/LayoutContainer";
-import Header from "../../components/layout/Header";
 import AppLayout from "../../components/container/AppLayout";
 import PageHeader from "../../components/layout/PageHeader";
 import TextInput from "../../components/inputs/TextInput";
-import Img from "../../components/Img";
-import Axios from "../../libs/axios";
 import PatientMenu from "../../components/buttons/PatientMenu";
-import usePagination from "../../hooks/usePagination";
 import Pagination from "../../components/table/Pagination";
 import LoadingScreen from "../../components/loading-screens/LoadingScreen";
 import useDataTable from "../../hooks/useDataTable";
