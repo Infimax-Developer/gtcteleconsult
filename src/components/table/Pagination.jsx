@@ -1,5 +1,5 @@
-import ActionBtn from "../Buttons/ActionBtn";
 import FlatIcon from "../FlatIcon";
+import ActionBtn from "../buttons/ActionBtn";
 import SelectInput from "../inputs/SelectInput";
 import TextInput from "../inputs/TextInput";
 
