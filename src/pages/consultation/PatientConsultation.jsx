@@ -14,7 +14,7 @@ function PatientConsultation() {
 		channel: "Test",
 		role: "host",
 		uid: "PATIENT",
-		token: "007eJxTYJCRb3axiTZeLGc57Zee8LMK5zNXOjiNJqubqGUyBDmGyigwWFpapKUZmSWlpZhZmqQkpSZapBgYpSWnpplapqYYmiV9Ou+R2hDIyHCp8i0rIwMEgvgsDCGpxSUMDAAvbx0f", // enter your channel token as a string
+		token: "007eJxTYCh3KWXilOl7HNrgZaZ1vcPZbm7d7dalE14uc5SVSBJdoq3AYGlpkZZmZJaUlmJmaZKSlJpokWJglJacmmZqmZpiaJbUqeCd2hDIyFD1roSZkQECQXwWhpDU4hIGBgCfDh2y", // enter your channel token as a string
 	};
 	const callbacks = {
 		EndCall: () => setVideoCall(false),

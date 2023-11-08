@@ -14,7 +14,7 @@ function App() {
 	const origin = window?.location?.origin || "";
 	console.log("looooccc", location);
 	const [linkURl, setLinkURL] = useState(
-		`${origin}/consultation?channel=Test&token=007eJxTYJCRb3axiTZeLGc57Zee8LMK5zNXOjiNJqubqGUyBDmGyigwWFpapKUZmSWlpZhZmqQkpSZapBgYpSWnpplapqYYmiV9Ou+R2hDIyHCp8i0rIwMEgvgsDCGpxSUMDAAvbx0f`
+		`${origin}/consultation?channel=Test&token=007eJxTYCh3KWXilOl7HNrgZaZ1vcPZbm7d7dalE14uc5SVSBJdoq3AYGlpkZZmZJaUlmJmaZKSlJpokWJglJacmmZqmZpiaJbUqeCd2hDIyFD1roSZkQECQXwWhpDU4hIGBgCfDh2y`
 	);
 	const [showLink, setShowLink] = useState(0);
 	const [videoCall, setVideoCall] = useState(false);
@@ -24,7 +24,7 @@ function App() {
 		channel: "Test",
 		role: "host",
 		uid: "DOCTOR",
-		token: "007eJxTYJCRb3axiTZeLGc57Zee8LMK5zNXOjiNJqubqGUyBDmGyigwWFpapKUZmSWlpZhZmqQkpSZapBgYpSWnpplapqYYmiV9Ou+R2hDIyHCp8i0rIwMEgvgsDCGpxSUMDAAvbx0f", // enter your channel token as a string
+		token: "007eJxTYCh3KWXilOl7HNrgZaZ1vcPZbm7d7dalE14uc5SVSBJdoq3AYGlpkZZmZJaUlmJmaZKSlJpokWJglJacmmZqmZpiaJbUqeCd2hDIyFD1roSZkQECQXwWhpDU4hIGBgCfDh2y", // enter your channel token as a string
 	};
 	const callbacks = {
 		EndCall: () => setVideoCall(false),
