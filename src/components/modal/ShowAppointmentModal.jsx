@@ -179,7 +179,7 @@ const ShowAppointmentModal = (props, ref) => {
 												whiteSpace: "wrap",
 											}}
 											className="text- mb-4 p-4 select-all rounded-xl max-w-[100%] break-all bg-blue-50 w-full"
-											value={linkURl}
+											value={`${linkURl}&patient=${appointment?.patient?.id}`}
 											onClick={copyLink}
 										/>
 										<ActionBtn

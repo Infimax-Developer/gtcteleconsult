@@ -4,13 +4,14 @@ import { useAuth } from "../../hooks/useAuth";
 import ActionBtn from "../buttons/ActionBtn";
 import Img from "../Img";
 
-const Header = () => {
+const Header = (props) => {
+	const { setSidebarOpen, sidebarOpen } = props;
 	const { user, logout } = useAuth();
 	return (
 		<div className="bg-primary">
 			<div className="h-[52px] w-full bg-primary-dark bg-opacity-60 flex items-center z-10 px-5">
-				<div className="container mx-auto flex items-center">
-					<span className="text-lg font-light -mt-1 text-white">
+				<div className="flex items-center w-full">
+					<span className="text-lg font-light ml-8 lg:ml-0 -mt-1 text-white">
 						{user?.type}
 					</span>
 

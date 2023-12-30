@@ -13,6 +13,8 @@ import PatientConsultation from "./pages/consultation/PatientConsultation.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Appointments from "./pages/appointments/Appointments.jsx";
 import MyAccount from "./pages/my-account/MyAccount.jsx";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css"; // optional
 axios.interceptors.request.use(
 	async function (config) {
 		const token = await getStorage("token");

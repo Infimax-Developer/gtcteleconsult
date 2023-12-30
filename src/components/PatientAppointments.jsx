@@ -8,10 +8,14 @@ import Pagination from "./table/Pagination";
 import Table from "./table/Table";
 import NewAppointmentModal from "./modal/NewAppointmentModal";
 import { v4 as uuidv4 } from "uuid";
+import Tippy from "@tippyjs/react";
+import ShowAppointmentModal from "./modal/ShowAppointmentModal";
 const uniq_id = uuidv4();
 const PatientAppointments = (props) => {
 	const { patient } = props;
 	const appointmentRef = useRef(null);
+	const showAppointmentModal = useRef(null);
+
 	const {
 		page,
 		setPage,
@@ -93,22 +97,47 @@ const PatientAppointments = (props) => {
 						},
 					},
 					{
+						header: "Notes",
+						className: "w-1/3 text-left",
+						tdClassName: "text-left",
+						key: "notes",
+					},
+					{
 						header: "Status",
-						className: "text-left",
+						className: "w-[100px] text-left",
 						tdClassName: "text-left",
 						key: "status",
 					},
 					{
 						header: "Action",
-						className: "",
+						className: "w-[150px]",
 						tdClassName: "text-center",
 						key: "action",
 						cell: (data) => {
 							return (
-								<div className="w-full flex items-center">
-									<ActionBtn className="!w-11 mx-auto">
-										<FlatIcon icon="rr-eye" />
+								<div className="flex items-center">
+									<ActionBtn
+										className="mx-2"
+										onClick={() => {
+											showAppointmentModal.current.show(
+												data
+											);
+										}}
+									>
+										<FlatIcon
+											icon="rr-link"
+											className="mr-2"
+										/>
+										Copy link
 									</ActionBtn>
+									{/* <Tippy content="Click to update as done">
+										<ActionBtn
+											className="mx-2"
+											type="success"
+										>
+											<FlatIcon icon="rr-check" />
+										</ActionBtn>
+									</Tippy> */}
 								</div>
 							);
 						},
@@ -132,6 +161,8 @@ const PatientAppointments = (props) => {
 					}));
 				}}
 			/>
+
+			<ShowAppointmentModal ref={showAppointmentModal} />
 		</div>
 	);
 };

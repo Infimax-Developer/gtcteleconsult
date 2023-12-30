@@ -5,7 +5,7 @@ import HomeMenuBtn from "../buttons/HomeMenuBtn";
 const PageHeader = ({ children, title, icon, subtitle }) => {
 	return (
 		<div className="px-5 py-4 bg-slate-100">
-			<div className="container mx-auto ">
+			<div className=" ">
 				<div className="flex items-center gap-2">
 					<span className="p-2 bg-blue-500 flex items-center justify-center px-3 rounded-xl ">
 						<FlatIcon

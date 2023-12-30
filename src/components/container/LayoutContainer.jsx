@@ -25,7 +25,7 @@ const LayoutContainer = ({ className = " animate-fadeIn", children }) => {
 
 	return (
 		<div
-			className={`h-screen w-screen bg-primary-dark flex flex-col lg:flex-row items-center justify-start lg:justify-center px-6 pt-20 pb-11 lg:p-20 relative ${className}`}
+			className={`h-[100dvh] w-screen bg-primary-dark overflow-auto flex flex-col lg:flex-row items-center justify-start lg:justify-center px-6 pt-20 pb-11 lg:p-20 relative ${className}`}
 		>
 			{/* <img
 				src="/b1.jpg"
@@ -33,7 +33,7 @@ const LayoutContainer = ({ className = " animate-fadeIn", children }) => {
 			/> */}
 
 			<div
-				className="z-[1] pointer-events-none fixed h-screen w-full top-0 left-0
+				className="z-[1] pointer-events-none fixed h-[100dvh]  w-full top-0 left-0
 	 opacity-50
 "
 			>
